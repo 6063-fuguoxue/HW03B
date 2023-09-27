@@ -11,11 +11,18 @@ It is easy to check if a circle overlaps with another: let the two circles' radi
 ## Plan
 Below are some of the tricks I used: 
 <ol>
-  <li>I packed the x-position, y-position, and radius of a circle in an object type. Therefore, each randomly generated circle proposal can be represented as a "circle" object. </li>
+  <li>I packed the x-position, y-position, and radius of a circle in an object. Therefore, each randomly generated circle proposal can be represented as a "circle" object. </li>
   <li>To store all the qualified circle proposals (the "circle" objects), I created a "circles" array. </li>
-  <li>For each of the circles after the first one, check if it overlaps with any of the previous ones. If there is no overlapping detected, push this proposal to the "circles" array. The code checks overlapping by calculating if the sum of two circles' radiuses is less than the distance between their center. </li>
+  <li>For each of the circles after the first one, check if it overlaps with any of the previous ones. If no overlap is detected, push this proposal to the "circles" array. The code checks overlaps by calculating if the sum of two circles' radiuses is less than the distance between their centers. </li>
   <li>Lastly, draw all the circles in the "circles" array. </li>
 </ol>
+
+## Difficulties
+When working on this assignment, I initially found it hard to store all the information of all the qualified circle proposals, as JavaScript doesn't have the tuple data type. However, upon searching online, I learned that I can use object type as an alternative. 
+
+There were several times I became confused about when to draw the circles. If the <code>ellipse</code> function is inside the for loop of circle proposals, the program will just draw all the circles randomly generated regardless of their overlapping conditions. Therefore, the drawing process should come after the for loop. 
+
+I also created an <code>overlapping</code> boolean inside the for loop to facilitate the decision process of qualified circle proposals. It will be initialized as false for every newly generated circle to check. 
 
 ## Findings
 Upon changing the number of proposals generated, I found that the bigger the number, the more circles are drawn on the canvas. 
