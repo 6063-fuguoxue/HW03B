@@ -11,10 +11,10 @@ It is easy to check if a circle overlaps with another: let the two circles' radi
 ## Plan
 Below are some of the tricks I used: 
 <ol>
-  <li>I packed the x-position, y-position, and radius of a circle in an object. Therefore, each randomly generated circle proposal can be represented as a "circle" object. </li>
-  <li>To store all the qualified circle proposals (the "circle" objects), I created a "circles" array. </li>
-  <li>For each of the circles after the first one, check if it overlaps with any of the previous ones. If no overlap is detected, push this proposal to the "circles" array. The code checks overlaps by calculating if the sum of two circles' radiuses is less than the distance between their centers. </li>
-  <li>Lastly, draw all the circles in the "circles" array. </li>
+  <li>I packed the x-position, y-position, and radius of a circle in an object. Therefore, each randomly generated circle proposal can be represented as a <code>circle</code> object. </li>
+  <li>To store all the qualified circle proposals (the <code>circle</code> objects), I created a <code>circles</code> array. </li>
+  <li>For each circle after the first one, check if it overlaps with any of the previous ones. If no overlap is detected, push this proposal to the <code>circles</code> array. The code checks overlaps by calculating if the sum of two circles' radiuses is less than the distance between their centers. </li>
+  <li>Lastly, draw all the circles in the <code>circles</code>. </li>
 </ol>
 
 ## Difficulties
