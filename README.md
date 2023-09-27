@@ -25,6 +25,6 @@ There were several times I became confused about when to draw the circles. If th
 I also created an <code>overlapping</code> boolean inside the for loop to facilitate the decision process of qualified circle proposals. It will be initialized as false for every newly generated circle to check. 
 
 ## Findings
-Upon changing the number of proposals generated, I found that the bigger the number, the more circles are drawn on the canvas. 
+Upon changing the preset number of proposals, I found that the bigger the number, the more circles are drawn on the canvas, and the less blank space remains. 
 
-I also noted that the number of circles drawn will always be less than or equal to the number of proposals I set. This is because circle proposals are being discarded due to overlapping. If there should be a fixed number of circles drawn on the canvas, the for loop should be replaced by a while loop for the circle proposal checking. 
+I also noted that the number of circles drawn will always be less than or equal to the number of proposals I set. This is because some circle proposals are discarded due to overlaps. If there should be a fixed number of circles drawn on the canvas, a while loop is a better choice for the circle proposal checking. 
